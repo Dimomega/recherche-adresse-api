@@ -1,4 +1,4 @@
-# Devoir 2 - Service Web
+# Devoir 2 - Ingénierie des Systèmes à base de Services
 
 ## TP API - Interface de recherche d'adresse 
 
@@ -7,7 +7,7 @@
 1. Information générale
 2. Technologie utilisée
 3. Ouvrir le terminal 
-4. Questions de l'interface
+4. Questionnement de l'interface
 5. Remerciements 
 6. Créateurs 
 
@@ -31,41 +31,34 @@ Pour utiliser l'interface de recherche d'adresse, veuillez suivre les étapes su
 
 Tout d'abord, téléchargez le fichier zip <strong>recherche-adresse-api</strong>. 
 
-Ensuite dézipez le dossier dans le répertoire de votre choix. 
+Ensuite, dézipez le dossier dans le répertoire de votre choix. 
 
 Ouvrez le terminal, puis rendez vous sur le chemin allant dans le répertoire où est stocké votre fichier <strong>recherche-adresse-api</strong>.
 
-Maintenant que vous êtes sur le chemin permettant d'accéder au dossier. Pour accéder à l'interface utilisateur, entrez la commande <strong>python .\rechercheadresseapi.py</strong>. 
+Maintenant que vous êtes sur le chemin permettant d'accéder au dossier, pour accéder à l'interface utilisateur, entrez la commande <strong>python .\rechercheadresseapi.py</strong>. 
 
 ----
-### Questions de l'interface
+### Questionnement de l'interface
 
 Le but de cette interface Python est de permettre à l'utilisateur de chercher et de trouver une adresse. 
+
 L'utilisateur doit passer par plusieurs étapes afin d'aboutir au résultat escompté. 
 
-Saisir de façon controlée l'adresse en composant le numéro et le nom de la rue recherché à la question : <strong>Veuillez saisir le numéro et le nom de la rue recherchée ?</strong>. 
+<strong>Veuillez saisir le numéro et le nom de la rue recherchée ?</strong> : Saisir de façon controlée l'adresse en composant le numéro et le nom de la rue recherché.
 
-Saisir le nombre de villes maximum recherchées à l'instruction : <strong>Saisir le nombre de villes maximum recherchées</strong> 
+<strong>Saisir le nombre de villes maximum recherchées</strong> : Saisir le nombre de villes maximum recherchées.
 
-Une liste représentant le nombre de villes maximum recherchées intitulé, <strong>Recherche terminé, il y a (nombre de réultats) résultats</strong>, va s'afficher.
+<strong>Recherche terminé, il y a (nombre de réultats) résultats</strong> : Affichage d'une liste représentant le nombre de villes maximum recherchées intitulé.
 
-<i>Exemple, si le nombre de ville maximum recherchées est de 15, la liste sera composé de 15 villes comportant le numéro et le nom de la rue recherchée saisi par l'utilisateur.</i> 
+<i>Exemple, si le nombre de ville maximum recherchées est de 15, la liste sera composée de 15 villes comportant le numéro et le nom de la rue recherchée saisi par l'utilisateur.</i> 
 
-Par la suite, l'utilisateur va pouvoir afficher plus de résultats en sélectionnant <i>y</i>, <i>oui</i>  ou n, <i>non</i> à l'instruction : <strong>Voulez-vous plus de résultat (y/n)</strong>
+<strong>Voulez-vous plus de résultat (y/n)</strong> : L'utilisateur va pouvoir afficher plus de résultats en sélectionnant <i>y</i>, <i>oui</i> pour afficher le reste des résultats ou n, <i>non</i> pour ne pas afficher le reste des résulats.
 
-<i>y</i>, <i>oui</i>, pour afficher le reste des résultats
-<i>n</i>, <i>non</i>, pour ne pas afficher le reste des résulats.  
+<strong>Voulez-vous afficher une adresse sur Google Maps ? </strong> : L'utilisateur pourra sélectionner <i>y</i>, <i>oui</i>, pour afficher une adresse sur Google Maps ou <i>n</i>, <i>non</i>, pour ne pas afficher une adresse sur Google Maps.  
 
-Il sera demandé à l'utilisateur de répondre à la question : <strong>Voulez-vous afficher une adresse sur Google Maps ? </strong>
+<strong>Adresse(s) visualisable(s) sur Google Maps</strong> : Si l'utilisateur sélectionne <i>y</i>, <i>oui</i>, la liste des adresses visualisables sur Google Maps seront affichées sinon non. 
 
-L'utilisateur pourra alors sélectionner <i>y</i>, <i>oui</i>, pour afficher une adresse sur Google Maps ou <i>n</i>, <i>non</i>, pour ne pas afficher une adresse sur Google Maps.  
-
-Si l'utilisateur sélectionne <i>y</i>, <i>oui</i>, la liste des adresses visualisables sur Google Maps ser affichée : <strong>Adresse(s) visualisable(s) sur Google Maps</strong>
-
-Par la suite, l'utilisateur peut choisir l'adresse qu'il désire dans la liste des adresses visualisables sur Google Maps en sélectionnant son index : <strong>Sélectionnez l'index de l'adresse que vous désirez visualiser via Google Maps</strong> 
- 
-En sélectionnant l'index de l'adresse désiré, une fenêtre navigateur internet s'ouvrira sur Google Maps à l'adresse recherché par l'utilisateur.   
-
+<strong>Sélectionnez l'index de l'adresse que vous désirez visualiser via Google Maps</strong> : L'utilisateur peut choisir l'adresse qu'il désire dans la liste des adresses visualisables sur Google Maps en sélectionnant son index. En sélectionnant l'index de l'adresse désiré, une fenêtre navigateur internet s'ouvrira sur Google Maps à l'adresse recherché par l'utilisateur.   
 Enfin l'utilisateur pourra alors sélectionner <i>y</i>, <i>oui</i>, pour rechercher une autre adresse ou <i>n</i>, <i>non</i>, pour terminer le programme Python.  
 
 ----
