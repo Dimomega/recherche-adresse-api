@@ -117,7 +117,7 @@ while boucle == 0:
         if message == 'y' or message == 'n':
             break
         else:
-            print('Entrer y ou n : ')
+            print('\n/!\ Entrer y ou n /!\ \n')
 
     if message == "n":
         print("\n--------------------------------------")
