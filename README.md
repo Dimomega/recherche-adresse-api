@@ -33,7 +33,8 @@ Tout d'abord, téléchargez le fichier zip <strong>recherche-adresse-api</strong
 
 Ensuite, dézipez le dossier dans le répertoire de votre choix. 
 
-Ouvrez le terminal, puis rendez vous sur le chemin allant dans le répertoire où est stocké votre fichier <strong>recherche-adresse-api</strong>.
+Ouvrez le terminal, puis rendez vous sur le chemin allant dans le répertoire où est stocké votre fichier 
+<strong>recherche-adresse-api</strong>.
 
 Maintenant que vous êtes sur le chemin permettant d'accéder au dossier, pour accéder à l'interface utilisateur, entrez la commande <strong>python .\rechercheadresseapi.py</strong>. 
 
@@ -48,7 +49,7 @@ L'utilisateur doit passer par plusieurs étapes afin d'aboutir au résultat esco
 
 <strong>Saisir le nombre de villes maximum recherchées</strong> : Saisir le nombre de villes maximum recherchées.
 
-<strong>Recherche terminé, il y a (nombre de réultats) résultats</strong> : Affichage d'une liste représentant le nombre de villes maximum recherchées intitulé.
+<strong>Recherche terminé, il y a (nombre de résultats) résultats</strong> : Affichage d'une liste représentant le nombre de villes maximum recherchées intitulé.
 
 <i>Exemple, si le nombre de ville maximum recherchées est de 15, la liste sera composée de 15 villes comportant le numéro et le nom de la rue recherchée saisi par l'utilisateur.</i> 
 
