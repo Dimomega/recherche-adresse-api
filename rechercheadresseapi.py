@@ -4,25 +4,23 @@ import webbrowser
 boucle = 0
 while boucle == 0:
     while True:
-        print("\n")
-        adresse = input('Veuillez saisir le numéro et le nom de la rue recherchés : ')
+        adresse = input('\nVeuillez saisir le numéro et le nom de la rue recherchée : ')
         try:
             int(adresse[0])
             break
         except:
-            print(" /!\ Remplir ce champ, en commençant par un numéro d'adresse /!\ ")
+            print("\n/!\ Remplir ce champ, en commençant par un numéro d'adresse /!\ ")
 
     while True:
         while True:
             try:
-                print("\n")
-                limite = int(input("Saisir le nombre de villes maximum recherchées : "))
+                limite = int(input("\nSaisir le nombre de villes maximum recherchées : "))
                 break
             except:
-                print(" /!\ Saisir un nombre ou un chiffre : /!\ ")
+                print("\n/!\ Saisir un nombre ou un chiffre : /!\ ")
             
         if limite <= 0 or limite > 36000:
-            print(" /!\ Entrer une valeur entre 0 et 36 000 : /!\ ")
+            print("\n/!\ Entrer une valeur entre 0 et 36 000 : /!\ ")
         else:
             break
     
@@ -57,11 +55,11 @@ while boucle == 0:
             while True:
                 print("\n--------------------------------------")
                 plusRes = input("Voulez-vous plus de résultat (y/n) : ")
-                print("--------------------------------------")
+                print("--------------------------------------\n")
                 if plusRes == 'y' or plusRes == 'n':
                     break
                 else:
-                    print('Entrer y ou n')
+                    print('\n/!\ Entrer y ou n /!\ \n')
         else:
             encore = 0
             break
@@ -76,58 +74,53 @@ while boucle == 0:
                 fin = entier
                 mettrefin = 1
 
-    while True:
-        if entier != 0: 
-            print("\n---------------------------------------------")
-            message1 = input('Voulez-vous ouvrir sur Google map ? (y/n) : ')
-            print("---------------------------------------------\n")
+    if entier != 0:
+        while True:   
+            print("\n------------------------------------------------------------")
+            message1 = input('Voulez-vous afficher une adresse sur Google Maps ? (y/n) : ')
+            print("------------------------------------------------------------\n")
             if message1 == 'y' or message1 == 'n':
                 break
             else:
-                print('Entrer y ou n')
-        else : 
-            break
-        
-    if message1 == 'y':
-        
-        while True:
+                print('\n/!\ Entrer y ou n /!\ \n')
+            
+        if message1 == 'y':
             while True:
-                try:
-                    print("Adresse(s) visualisable sur Google Maps : \n")
-                    index = 1
-                    for y in liste:
-                        print("[" + str(index) + "] - " + y + ".")
-                        index += 1
-                    valeur = int(input("\nSélectionnez l'index de l'adresse que vous désirez visualiser via Google Maps : "))
+                while True:
+                    try:
+                        print("Adresse(s) visualisable(s) sur Google Maps : \n")
+                        index = 1
+                        for y in liste:
+                            print("[" + str(index) + "] - " + y + ".")
+                            index += 1
+                        valeur = int(input("\nSélectionnez l'index de l'adresse que vous désirez visualiser via Google Maps : "))
+                        break
+                    except:
+                        print("\n/!\ Merci de saisir un chiffre /!\ \n")
+                if valeur - 1 <= -1 or valeur - 1 >= entier:
+                    print("\n/!\ Entrer une valeur entre 1 et %s /!\ \n" %(entier))
+                else:
                     break
-                except:
-                    print(" /!\ Merci de saisir un chiffre /!\ ")
-                    print("\n")
-            if valeur - 1 <= -1 or valeur - 1 > entier:
-                print(" /!\ Entrer un valeur entre 1 et %s /!\ " %(entier))
-                print("\n")
-            else:
-                break
 
-        x = r["features"][valeur - 1]["geometry"]["coordinates"][0]
-        y = r["features"][valeur - 1]["geometry"]["coordinates"][1]
+            x = r["features"][valeur - 1]["geometry"]["coordinates"][0]
+            y = r["features"][valeur - 1]["geometry"]["coordinates"][1]
 
-        adresseMap = "www.google.com/maps/@"+str(y)+","+str(x)+",20z"
-        adresseHTML = adresseMap
+            adresseMap = "www.google.com/maps/@"+str(y)+","+str(x)+",20z"
+            adresseHTML = adresseMap
 
-        webbrowser.open(adresseHTML)
+            webbrowser.open(adresseHTML)
 
     while True:
-        print("\n--------------------------------------------------")
-        message = input('Voulez-vous chercher une autre adresse ? (y/n) : ')
-        print("--------------------------------------------------\n")
+        print("\n----------------------------------------------------")
+        message = input('Voulez-vous rechercher une autre adresse ? (y/n) : ')
+        print("----------------------------------------------------")
         if message == 'y' or message == 'n':
             break
         else:
             print('Entrer y ou n : ')
 
     if message == "n":
-        print("--------------------------------------")
+        print("\n--------------------------------------")
         print("Merci d'avoir utilisé notre programme.")
         print("--------------------------------------\n")
         boucle = 1
